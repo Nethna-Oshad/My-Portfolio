@@ -17,7 +17,7 @@ interface HeroProps {
 
 function Hero({
     greeting = "Code → Design → logic",
-    name = "Nethna Oshaddd",
+    name = "Nethna Oshad",
     typewriterStrings = [
         "Frontend Engineer",
         "Backend Engineer",
