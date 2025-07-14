@@ -41,7 +41,7 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   // Updated title to reflect your name (unchanged)
-  title: "Pasindu Sadhanjana's Portfolio",
+  title: "Nethna Oshad's Portfolio",
   description: 'A modern portfolio built with Next.js and shadcn/ui',
 };
 
