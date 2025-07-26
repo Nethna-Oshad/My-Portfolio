@@ -17,27 +17,27 @@ interface AboutProps {
 const defaultTimeline: TimelineItem[] = [
     {
         year: "2023",
-        title: "Started BIT at University of Moratuwa",
+        title: "Started B.Sc at SLIIT",
         description:
-            "began pursuing a Bachelor of Information Technology (BIT) degree at the University of Moratuwa, completing the first year with a strong foundation in IT and software development.",
+            "Began pursuing a B.Sc (Hons) in Information Technology - Software Engineering at the Sri Lanka Institute of Information Technology (SLIIT), Faculty of Computing, building a strong foundation in programming, UI/UX design, and full stack development.",
     },
     {
         year: "2024",
-        title: "Completed Second Year of BIT",
+        title: "Completed Second Year at SLIIT",
         description:
-            " successfully completed the second year of the BIT degree at the University of Moratuwa, advancing skills in programming, systems design, and modern technologies.",
+            "Successfully completed the second year of the B.Sc degree at SLIIT, Faculty of Computing, enhancing skills in web development, database management, and software optimization techniques.",
     },
     {
         year: "2025",
-        title: "Third Year, Final Semester of BIT",
+        title: "Third Year at SLIIT",
         description:
-            "currently in the third year, final semester of the BIT degree at the University of Moratuwa, focusing on advanced topics and preparing for a career in technology.",
+            "Currently in the third year of the B.Sc (Hons) in Information Technology at SLIIT, Faculty of Computing, focusing on advanced software engineering concepts and preparing for a career in technology.",
     },
 ];
 
 function About({
     timeline = defaultTimeline,
-    title = "About Me",
+    title = "About Your Name",
 }: AboutProps) {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -63,7 +63,7 @@ function About({
     return (
         <section
             id="about"
-            className="relative min-h-screen  py-16 sm:py-24 overflow-hidden"
+            className="relative min-h-screen py-16 sm:py-24 overflow-hidden"
         >
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div

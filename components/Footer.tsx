@@ -30,13 +30,13 @@ interface FooterProps {
 const defaultSocialLinks: SocialLink[] = [
     {
         name: "GitHub",
-        url: "https://github.com/pasinduwickramasuriya",
+        url: "https://github.com/Nethna-Oshad",
         iconClass: "fab fa-github",
         displayName: "GitHub",
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/pasindu-sadhanjana/",
+        url: "https://www.linkedin.com/in/nethna-oshad-874516216/",
         iconClass: "fab fa-linkedin",
         displayName: "LinkedIn",
     },
@@ -51,13 +51,13 @@ const defaultQuickLinks: QuickLink[] = [
 ];
 
 const defaultContactInfo: ContactInfo = {
-    email: "pasindusadanjana17@gmail.com",
+    email: "nethna2001oshad@gmail.com",
     location: "Sri Lanka",
 };
 
 function Footer({
-    brandTitle = "pasindu.dev",
-    brandDescription = "Full-Stack Developer crafting seamless web and desktop applications.",
+    brandTitle = "Nethna.dev",
+    brandDescription = "Full-Stack Developer crafting seamless web applications.",
     socialLinks = defaultSocialLinks,
     quickLinks = defaultQuickLinks,
     contactInfo = defaultContactInfo,

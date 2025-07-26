@@ -20,13 +20,13 @@ interface ContactProps {
 const defaultSocialLinks: SocialLink[] = [
     {
         name: "GitHub",
-        url: "https://github.com/pasinduwickramasuriya",
+        url: "https://github.com/Nethna-Oshad",
         iconClass: "fab fa-github",
         displayName: "GitHub",
     },
     {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/pasindu-sadhanjana/",
+        url: "https://www.linkedin.com/in/nethna-oshad-874516216/",
         iconClass: "fab fa-linkedin",
         displayName: "LinkedIn",
     },
@@ -36,7 +36,7 @@ const defaultSocialLinks: SocialLink[] = [
 function Contact({
     headerTitle = "Get in Touch",
     headerSubtitle = "Let's connect and create something amazing together",
-    emailAddress = "pasindusadanjana17@gmail.com",
+    emailAddress = "nethna2001oshad@gmail.com",
     socialLinks = defaultSocialLinks,
 }: ContactProps) {
     const [isVisible, setIsVisible] = useState(false);

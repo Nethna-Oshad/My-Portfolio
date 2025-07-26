@@ -31,11 +31,11 @@ const defaultCategories: Categories = {
             icon: "devicon-react-original colored",
             description: "Creating dynamic user interfaces",
         },
-        {
+        /*{
             name: "TypeScript",
             icon: "devicon-typescript-plain colored",
             description: "Adding type safety to JavaScript",
-        },
+        },*/
         {
             name: "Tailwind CSS",
             icon: "devicon-tailwindcss-original colored",
