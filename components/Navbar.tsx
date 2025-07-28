@@ -192,87 +192,84 @@ export function Navbar() {
                 </div>
 
                 {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ y: -20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
-                        className=" absolute top-[64px] left-0 w-full bg-background/90 backdrop-blur-md p-3 flex flex-col items-center md:hidden z-50" // Added: Explicit z-50 to ensure mobile menu is above overlay
-                    >
-                        {/* Logo + Name in Mobile Menu */}
-                        <div className="flex items-center justify-center mb-3">
-                            <span className="font-semibold text-base text-foreground ml-1.5 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
-                                Nethna.dev
-                            </span>
-                        </div>
+{isMobileMenuOpen && (
+  <motion.div
+    initial={{ y: -20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.25, ease: "easeOut" }}
+    className="absolute top-[64px] left-0 w-full bg-background/90 backdrop-blur-md p-3 flex flex-col items-center md:hidden z-50"
+  >
+    {/* Logo + Name in Mobile Menu */}
+    <div className="flex items-center justify-center mb-3">
+      <span className="font-semibold text-base text-foreground ml-1.5 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
+        Nethna.dev
+      </span>
+    </div>
 
-                        {/* Links */}
-                        <div className=" flex flex-col items-center gap-1.5 w-full">
-                            {NAV_LINKS.map((link, index) => (
-                                <motion.div
-                                    key={link.title}
-                                    custom={index}
-                                    initial="hidden"
-                                    animate="visible"
-                                    variants={linkVariants}
-                                    className="w-full"
-                                >
-                                    <Button
-                                        variant="ghost"
-                                        asChild
-                                        className="w-full text-red-500 text-base hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full py-0.5"
+    {/* Links */}
+    <div className="flex flex-col items-center gap-1.5 w-full">
+      {NAV_LINKS.map((link, index) => (
+        <motion.div
+          key={link.title}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={linkVariants}
+          className="w-full"
+        >
+          <Button
+            variant="ghost"
+            asChild
+            className="w-full text-blue-500 text-base hover:bg-primary/10 hover:text-blue-400 transition-all duration-200 rounded-full py-0.5"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Link href={link.link}>{link.title}</Link>
+          </Button>
+        </motion.div>
+      ))}
+      <motion.div
+        custom={NAV_LINKS.length}
+        initial="hidden"
+        animate="visible"
+        variants={linkVariants}
+        className="w-full"
+      >
+        <Button
+          variant="ghost"
+          asChild
+          className="w-full text-blue-500 text-base hover:bg-primary/10 hover:text-blue-400 transition-all duration-200 rounded-full py-0.5"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
+            Source Code
+          </Link>
+        </Button>
+      </motion.div>
+    </div>
 
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                    >
-                                        <Link href={link.link}>{link.title}</Link>
-                                    </Button>
-                                </motion.div>
-                            ))}
-                            <motion.div
-                                custom={NAV_LINKS.length}
-                                initial="hidden"
-                                animate="visible"
-                                variants={linkVariants}
-                                className="w-full"
-                            >
-                                <Button
-                                    variant="ghost"
-                                    asChild
-                                    // className=" w-full text-foreground text-base hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full py-0.5" 
-                                     className="w-full text-red-500 text-base hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full py-0.5"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
-                                        Source
-                                    </Link>
-                                </Button>
-                            </motion.div>
-                        </div>
-
-                        {/* Social Icons */}
-                        <div className="flex justify-center gap-4 mt-3">
-                            {SOCIALS.map(({ link, name, icon: Icon }, index) => (
-                                <motion.div
-                                    key={name}
-                                    custom={index}
-                                    initial="hidden"
-                                    animate="visible"
-                                    variants={socialVariants}
-                                >
-                                    <Link
-                                        href={link}
-                                        target="_blank"
-                                        rel="noreferrer noopener"
-                                        // className="text-foreground hover:text-blue-500 transition-all duration-200 hover:scale-125"
-                                         className="w-full text-red-500 text-base hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full py-0.5"
-                                    >
-                                        <Icon className="h-6 w-6" />
-                                    </Link>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
+    {/* Social Icons */}
+    <div className="flex justify-center gap-4 mt-3">
+      {SOCIALS.map(({ link, name, icon: Icon }, index) => (
+        <motion.div
+          key={name}
+          custom={index}
+          initial="hidden"
+          animate="visible"
+          variants={socialVariants}
+        >
+          <Link
+            href={link}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-blue-500 hover:text-blue-400 transition-all duration-200 hover:scale-125"
+          >
+            <Icon className="h-6 w-6" />
+          </Link>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+)}
             </motion.nav>
         </>
     );

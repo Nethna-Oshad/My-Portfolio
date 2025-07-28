@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
+/* styles/globals.css */
+@import "devicon/devicon.min.css";
+/* styles/globals.css */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -119,4 +122,11 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.fab,
+.fas {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+  font-weight: 900; /* Required for solid and brand icons */
+  display: inline-block;
+  line-height: 1;
 }
