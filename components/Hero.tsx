@@ -24,7 +24,7 @@ function Hero({
         "Fullstack Engineer",
         "UI/UX Engineer",
     ],
-    profileImage = "/Ne.png",
+    profileImage = "/Ne3.png",
     profileImageAlt = "Profile picture of Nethna",
     ctaLink = "#contact",
 }: HeroProps) {
