@@ -107,7 +107,7 @@ function Hero({
                                 variant="outline" // Use outline variant to differentiate from primary button
                                 className="group relative rounded-lg border-blue-500 text-blue-500 px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-105 overflow-hidden"
                             >
-                                <a href="/Oshad.pdf" download aria-label="Download CV">
+                                <a href="\Nethna Oshad.pdf" download aria-label="Download CV">
                                     <span className="relative z-10">Download CV</span>
                                     <div className="absolute inset-0 bg-blue-400 transform origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
                                 </a>

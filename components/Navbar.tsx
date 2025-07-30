@@ -152,7 +152,7 @@ export function Navbar() {
                                     className="text-foreground text-sm hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full px-2.5 py-0.5"
                                 >
                                     <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
-                                      
+                                      Certifications
                                     </Link>
                                 </Button> 
                             </motion.div>
@@ -241,7 +241,7 @@ export function Navbar() {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
-            Source Code
+             Certifications
           </Link>
         </Button>
       </motion.div>
