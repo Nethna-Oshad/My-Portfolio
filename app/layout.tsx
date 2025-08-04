@@ -43,6 +43,9 @@ export const metadata = {
   // Updated title to reflect your name (unchanged)
   title: "Nethna's Portfolio",
   description: 'A modern portfolio built with Next.js and shadcn/ui',
+  icons: {
+    icon: '/N.jpg',
+  },
 };
 
 export default function RootLayout({
