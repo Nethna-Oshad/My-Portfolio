@@ -19,13 +19,13 @@ const defaultTimeline: TimelineItem[] = [
         year: "2023",
         title: "Started B.Sc at SLIIT",
         description:
-            "Began pursuing a B.Sc (Hons) in Information Technology - Software Engineering at the Sri Lanka Institute of Information Technology (SLIIT), Faculty of Computing, building a strong foundation in programming, UI/UX design, and full stack development.",
+            "Began pursuing a B.Sc (Hons) in Information Technology at the Sri Lanka Institute of Information Technology (SLIIT), Faculty of ComputingCompleted the first year with a strong foundation in programming, OOP, databases, data structures, and web development, while gaining practical experience through projects and exploring UI/UX and software engineering principles.",
     },
     {
         year: "2024",
-        title: "Completed Second Year at SLIIT",
+        title: "Started Second Year at SLIIT",
         description:
-            "Successfully completed the second year of the B.Sc degree at SLIIT, Faculty of Computing, enhancing skills in web development, database management, and software optimization techniques.",
+            "Strengthened skills in full-stack web development, advanced database management, software engineering practices, and performance optimization through hands-on projects and collaborative learning.",
     },
     {
         year: "2025",
@@ -37,7 +37,7 @@ const defaultTimeline: TimelineItem[] = [
 
 function About({
     timeline = defaultTimeline,
-    title = "About Your Name",
+    title = "About Me",
 }: AboutProps) {
     const [isVisible, setIsVisible] = useState(false);
 

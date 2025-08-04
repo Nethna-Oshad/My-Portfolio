@@ -13,12 +13,9 @@ const NAV_LINKS = [
     { title: "Services", link: "#services" },
     { title: "Skills", link: "#skills" },
     { title: "Work", link: "#work" },
+    { title: "Certifications", link: "#certifications" },
     { title: "Contact", link: "#contact" },
 ];
-
-const LINKS = {
-    sourceCode: "https://github.com/Nethna-Oshad",
-};
 
 const SOCIALS = [
     {
@@ -70,7 +67,7 @@ const socialVariants: Variants = {
     }),
 };
 
-// Added: Define overlay variants for background blur animation
+// Define overlay variants for background blur animation
 const overlayVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,7 +84,7 @@ export function Navbar() {
 
     return (
         <>
-            {/* Added: Full-screen overlay for background blur when mobile menu is open */}
+            {/* Full-screen overlay for background blur when mobile menu is open */}
             {isMobileMenuOpen && (
                 <motion.div
                     initial="hidden"
@@ -95,17 +92,17 @@ export function Navbar() {
                     exit="hidden"
                     variants={overlayVariants}
                     className="fixed inset-0 bg-transparent backdrop-blur-md z-40"
-                    onClick={() => setIsMobileMenuOpen(false)} // Added: Close menu when clicking overlay
+                    onClick={() => setIsMobileMenuOpen(false)}
                 />
             )}
             <motion.nav
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="fixed top-0 w-full bg-background/10 backdrop-blur-md z-50 px-4 sm:px-5 lg:px-7 h-[64px]  shadow-primary/10"
+                className="fixed top-0 w-full bg-background/10 backdrop-blur-md z-50 px-4 sm:px-5 lg:px-7 h-[64px] shadow-primary/10"
             >
                 {/* Navbar Container */}
-                <div className="max-w-5xl mx-auto h-full flex items-center justify-between ">
+                <div className="max-w-5xl mx-auto h-full flex items-center justify-between">
                     {/* Logo + Name */}
                     <Link href="#home" className="flex items-center group">
                         <span className="font-semibold text-lg lg:text-base lg:text-lg text-foreground ml-1.5 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent group-hover:scale-105 transition-transform">
@@ -140,22 +137,6 @@ export function Navbar() {
                                     </Button>
                                 </motion.div>
                             ))}
-                            <motion.div
-                                custom={NAV_LINKS.length}
-                                initial="hidden"
-                                animate="visible"
-                                variants={linkVariants}
-                            >
-                                 <Button
-                                    variant="ghost"
-                                    asChild
-                                    className="text-foreground text-sm hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full px-2.5 py-0.5"
-                                >
-                                    <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
-                                      Certifications
-                                    </Link>
-                                </Button> 
-                            </motion.div>
                         </div>
                     </div>
 
@@ -184,7 +165,7 @@ export function Navbar() {
                     {/* Hamburger Menu */}
                     <Button
                         variant="ghost"
-                        className="md:hidden text-foreground text-2xl focus:outline-none hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full p-2" // Changed: Updated hover:text-pink-300 to hover:text-blue-500 for consistency with blue color scheme
+                        className="md:hidden text-foreground text-2xl focus:outline-none hover:bg-primary/10 hover:text-blue-500 transition-all duration-200 rounded-full p-2"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
                         ☰
@@ -192,84 +173,66 @@ export function Navbar() {
                 </div>
 
                 {/* Mobile Menu */}
-{isMobileMenuOpen && (
-  <motion.div
-    initial={{ y: -20, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.25, ease: "easeOut" }}
-    className="absolute top-[64px] left-0 w-full bg-background/90 backdrop-blur-md p-3 flex flex-col items-center md:hidden z-50"
-  >
-    {/* Logo + Name in Mobile Menu */}
-    <div className="flex items-center justify-center mb-3">
-      <span className="font-semibold text-base text-foreground ml-1.5 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
-        Nethna.dev
-      </span>
-    </div>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ y: -20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        className="absolute top-[64px] left-0 w-full bg-background/90 backdrop-blur-md p-3 flex flex-col items-center md:hidden z-50"
+                    >
+                        {/* Logo + Name in Mobile Menu */}
+                        <div className="flex items-center justify-center mb-3">
+                            <span className="font-semibold text-base text-foreground ml-1.5 bg-gradient-to-r from-primary via-blue-500 to-accent bg-clip-text text-transparent">
+                                Nethna.dev
+                            </span>
+                        </div>
 
-    {/* Links */}
-    <div className="flex flex-col items-center gap-1.5 w-full">
-      {NAV_LINKS.map((link, index) => (
-        <motion.div
-          key={link.title}
-          custom={index}
-          initial="hidden"
-          animate="visible"
-          variants={linkVariants}
-          className="w-full"
-        >
-          <Button
-            variant="ghost"
-            asChild
-            className="w-full text-blue-500 text-base hover:bg-primary/10 hover:text-blue-400 transition-all duration-200 rounded-full py-0.5"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <Link href={link.link}>{link.title}</Link>
-          </Button>
-        </motion.div>
-      ))}
-      <motion.div
-        custom={NAV_LINKS.length}
-        initial="hidden"
-        animate="visible"
-        variants={linkVariants}
-        className="w-full"
-      >
-        <Button
-          variant="ghost"
-          asChild
-          className="w-full text-blue-500 text-base hover:bg-primary/10 hover:text-blue-400 transition-all duration-200 rounded-full py-0.5"
-          onClick={() => setIsMobileMenuOpen(false)}
-        >
-          <Link href={LINKS.sourceCode} target="_blank" rel="noreferrer noopener">
-             Certifications
-          </Link>
-        </Button>
-      </motion.div>
-    </div>
+                        {/* Links */}
+                        <div className="flex flex-col items-center gap-1.5 w-full">
+                            {NAV_LINKS.map((link, index) => (
+                                <motion.div
+                                    key={link.title}
+                                    custom={index}
+                                    initial="hidden"
+                                    animate="visible"
+                                    variants={linkVariants}
+                                    className="w-full"
+                                >
+                                    <Button
+                                        variant="ghost"
+                                        asChild
+                                        className="w-full text-blue-500 text-base hover:bg-primary/10 hover:text-blue-400 transition-all duration-200 rounded-full py-0.5"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        <Link href={link.link}>{link.title}</Link>
+                                    </Button>
+                                </motion.div>
+                            ))}
+                        </div>
 
-    {/* Social Icons */}
-    <div className="flex justify-center gap-4 mt-3">
-      {SOCIALS.map(({ link, name, icon: Icon }, index) => (
-        <motion.div
-          key={name}
-          custom={index}
-          initial="hidden"
-          animate="visible"
-          variants={socialVariants}
-        >
-          <Link
-            href={link}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="text-blue-500 hover:text-blue-400 transition-all duration-200 hover:scale-125"
-          >
-            <Icon className="h-6 w-6" />
-          </Link>
-        </motion.div>
-      ))}
-    </div>
-  </motion.div>
-)}
+                        {/* Social Icons */}
+                        <div className="flex justify-center gap-4 mt-3">
+                            {SOCIALS.map(({ link, name, icon: Icon }, index) => (
+                                <motion.div
+                                    key={name}
+                                    custom={index}
+                                    initial="hidden"
+                                    animate="visible"
+                                    variants={socialVariants}
+                                >
+                                    <Link
+                                        href={link}
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        className="text-blue-500 hover:text-blue-400 transition-all duration-200 hover:scale-125"
+                                    >
+                                        <Icon className="h-6 w-6" />
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
             </motion.nav>
         </>
     );

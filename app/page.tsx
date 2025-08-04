@@ -114,6 +114,7 @@ import Work from '@/components/Work';
 import Contact from '@/components/Contact';
 import { StarsCanvas } from '@/components/StarBackground';
 import Hero from '@/components/Hero';
+import Certifications from '@/components/Certifications';
 
 export default function Home() {
   return (
@@ -167,6 +168,14 @@ export default function Home() {
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 0.7, delay: 1.0 }}
         // Changed y to translateY and adjusted duration
+        >
+          <Certifications />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateY: 4 }}
+          animate={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.7, delay: 1.2 }}
+        // Changed y to translateY and adjusted duration, updated delay to 1.2
         >
           <Contact />
         </motion.div>

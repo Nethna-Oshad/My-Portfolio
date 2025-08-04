@@ -22,60 +22,60 @@ interface WorkProps {
 
 const defaultProjects: Project[] = [
     {
-        title: "Adventure Next.js",
+        title: "Recycling Locator and Education Platform",
         description:
-            "Full-stack safari booking system with dark-themed UI, RESTful API, and customer messaging.",
-        tech: ["Next.js", "Node.js", "TypeScript", "MongoDB", "ShadCN", "Tailwind CSS", "NodeMailer"],
-        image: "/adventure-next.png",
-        liveLink: "https://github.com/pasinduwickramasuriya",
-        githubLink: "https://github.com/pasinduwickramasuriya",
+            "A full-stack MERN application to locate recycling centers and educate users on sustainable practices.",
+        tech: ["React", "Node.js", "Chakra UI", "MongoDB", "Express", "Postman"],
+        image: "/RecycleMERN.jpg",
+        liveLink: "https://github.com/Nethna-Oshad/Recycling-MERN-Project",
+        githubLink: "https://github.com/Nethna-Oshad/Recycling-MERN-Project",
         category: "Full-Stack",
         featured: true,
     },
     {
-        title: "NextSecure Auth",
+        title: "Bank Management System - User Management",
         description:
-            "Secure authentication system with NextAuth.js and modern, responsive design.",
-        tech: ["Next.js", "MongoDB", "NextAuth.js", "ShadCN", "Tailwind CSS", "TypeScript"],
-        image: "/nextsecure-auth.png",
-        liveLink: "https://github.com/pasinduwickramasuriya",
-        githubLink: "https://github.com/pasinduwickramasuriya",
+            "User management module for a School Management System, focusing on secure user handling and data management.",
+        tech: ["PHP", "HTML", "CSS", "MySQL", "XAMPP"],
+        image: "/BankPHP.jpg",
+        liveLink: "https://github.com/Nethna-Oshad/Php-Project",
+        githubLink: "https://github.com/Nethna-Oshad/Php-Project",
         category: "Full-Stack",
+    },
+    {
+        title: "Online Transport System - User Management",
+        description:
+            "User management system for an online transport platform, handling user data and authentication.",
+        tech: ["Java", "MySQL", "Apache Tomcat 9"],
+        image: "/JavaTrasport.jpg",
+        liveLink: "https://github.com/Nethna-Oshad/Java-User-Management",
+        githubLink: "https://github.com/Nethna-Oshad/Java-User-Management",
+        category: "Full-Stack",
+    },
+    {
+        title: "Finance Tracker App",
+        description:
+            "A mobile application to track personal finances, manage budgets, and visualize expenses.",
+        tech: ["Kotlin", "XML", "Android Studio"],
+        image: "/FinanceTracker.jpg",
+        liveLink: "https://github.com/Nethna-Oshad/Finance-Tracker-App",
+        githubLink: "https://github.com/Nethna-Oshad/Finance-Tracker-App",
+        category: "Mobile",
         featured: true,
     },
     {
-        title: "Pharmacy Inventory Management",
+        title: "Edu.Hub",
         description:
-            "Desktop app for streamlined inventory management and billing with SQL Server.",
-        tech: ["C#", "SQL Server", "Visual Studio"],
-        image: "/pharmacy-inventory.png",
-        liveLink: "https://github.com/pasinduwickramasuriya",
-        githubLink: "https://github.com/pasinduwickramasuriya",
-        category: "Desktop",
-    },
-    {
-        title: "Room Booking Web App",
-        description:
-            "Full-stack MERN app with Stripe payments and email notifications for room booking.",
-        tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Bootstrap", "Stripe", "NodeMailer"],
-        image: "/room-booking.png",
-        liveLink: "https://github.com/pasinduwickramasuriya",
-        githubLink: "https://github.com/username/room-booking",
-        category: "Full-Stack",
-    },
-    {
-        title: "Tour Booking Web App",
-        description:
-            "Responsive frontend for a tour booking app using React.js and custom CSS.",
-        tech: ["React.js", "Custom CSS"],
-        image: "/tour-booking.png",
-        liveLink: "https://github.com/pasinduwickramasuriya",
-        githubLink: "https://github.com/pasinduwickramasuriya",
+            "UI/UX design for an online learning platform, crafted for intuitive navigation and user engagement.",
+        tech: ["Figma"],
+        image: "/Edu.hub.jpg",
+        liveLink: "https://www.figma.com/file/Q2HAkNFg5ZZLHiIJTxQ7lj",
+        behanceLink: "https://www.figma.com/file/Q2HAkNFg5ZZLHiIJTxQ7lj",
         category: "UI/UX",
     },
 ];
 
-const defaultFilters: string[] = ["All", "Full-Stack", "Desktop", "UI/UX"];
+const defaultFilters: string[] = ["All", "Full-Stack", "Mobile", "UI/UX"];
 
 function Work({
     projects = defaultProjects,
@@ -132,7 +132,7 @@ function Work({
     return (
         <section
             id="work"
-            className="relative min-h-screen  py-16 sm:py-24 overflow-hidden"
+            className="relative min-h-screen py-16 sm:py-24 overflow-hidden"
         >
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
@@ -146,7 +146,7 @@ function Work({
                     </h2>
                     <div className="h-1 w-20 bg-blue-500 mx-auto rounded-full mb-4" />
                     <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-                        A showcase of my full-stack, desktop, and UI/UX projects
+                        A showcase of my full-stack, mobile, and UI/UX projects
                     </p>
                 </motion.div>
 
@@ -183,19 +183,19 @@ function Work({
                                 style={{ transitionDelay: `${index * 100}ms` }}
                             >
                                 <div className="relative overflow-hidden aspect-video">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a2e] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    {project.featured && (
-                      <div className="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-sm rounded-full transform rotate-3">
-                        Featured
-                      </div>
-                    )}
-                  </div>
+                                    {project.featured && (
+                                        <div className="absolute top-4 right-4 px-3 py-1 bg-blue-500 text-white text-sm rounded-full transform rotate-3">
+                                            Featured
+                                        </div>
+                                    )}
+                                </div>
 
                                 <div className="p-4 sm:p-6 space-y-4">
                                     <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
@@ -256,7 +256,7 @@ function Work({
                                                     rel="noopener noreferrer"
                                                     className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                                                 >
-                                                    <i className="fab fa-behance text-lg sm:text-xl" />
+                                                    <i className="fab fa-figma text-lg sm:text-xl" />
                                                 </a>
                                             )}
                                         </div>
